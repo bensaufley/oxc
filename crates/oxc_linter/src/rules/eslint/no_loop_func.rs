@@ -811,7 +811,7 @@ fn test() {
                   ",
         // Function in the for-update slot is not in the loop body.
         "for (var i = 0; i < l; i++, (function () { i; })()) { }",
-        r#"
+        r"
             const callbacks = [];
             for (let row = 0; row < 5; row++) {
                 for (let col = 0; col < 5; col++) {
@@ -838,7 +838,7 @@ fn test() {
             for (let imageId = 0; imageId < 5; imageId++) {
                 image.onload = () => (isOn ? 'enabled' : 'disabled');
             }
-        "#,
+        ",
     ];
 
     let fail = vec![
